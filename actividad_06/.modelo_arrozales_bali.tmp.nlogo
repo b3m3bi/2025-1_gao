@@ -84,10 +84,10 @@ to elegir_siguiente_itinerario
     reglas_decision = "aleatorio" [ set I_t1 one-of itinerarios]
     reglas_decision = "mayoria" [
       let cosecha_mayoria modes [I_t] of vecinos_cosecha
-      set cosecha_mayoria one-of cosecha_mayoria  ;; <-- Luis: aquí solo para seleccionar al azar cuando hay más de 1 moda puedes usar mejor 'one-of'
+      set cosecha_mayoria one-of cosecha_mayoria  ;; Luis: aquí solo para seleccionar al azar cuando hay más de 1 moda puedes usar mejor 'one-of'
       set I_t1 cosecha_mayoria]
     reglas_decision = "minoria" [
-    let mini minoria2 ;; <-- Luis: probamos el otro porcedimiento, para ver la diferencia con el tuyo aquí puedes ponerle como antes 'minoria'
+    let mini minoria2 ;; Luis: probamos el otro porcedimiento
     set I_t1 mini]
   )
 end
